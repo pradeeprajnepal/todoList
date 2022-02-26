@@ -1,5 +1,6 @@
 import List from "./ui";
 import  {UI}  from "./ui";
+import { Store } from "./store";
 
 function addItems(){
 
@@ -18,6 +19,8 @@ function addItems(){
             const item= new List(task);
 
             UI.addItemToList(item);   
+
+            Store.addTask(item);
             
             UI.showAlert("Task added successfully", "success")
 

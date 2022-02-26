@@ -8,6 +8,7 @@
 import addItems from "./modules/addItem";
 import removeItem from "./modules/removeItem";
 import editItem from "./modules/editItem";
+import {UI} from "./modules/ui";
 
 addItems();
 removeItem();

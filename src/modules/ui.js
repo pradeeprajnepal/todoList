@@ -1,3 +1,4 @@
+import { Store } from "./store";
 
 export default class List{
         constructor(detail){
@@ -6,6 +7,13 @@ export default class List{
     }
 
 export class UI{
+
+        static dispalyList(){
+            const storedList= Store.getTasks();
+            const tasks= storedList;
+
+            tasks.forEach((task)=>UI.addItemToList(task));
+        }
 
         static addItemToList(task){
             const list= document.querySelector("#tasks");
@@ -75,6 +83,7 @@ export class UI{
 
         static editItem(el){
             if(el.classList.contains("edit")){
+                
                 const input= document.querySelector("#list-input");
                 const edit= document.querySelector("#edit");
                 
